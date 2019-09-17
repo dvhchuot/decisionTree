@@ -1,0 +1,7 @@
+D:\Bt\CayQuyetDinhConsole\CayQuyetDinhConsole\bin\Debug\CayQuyetDinhConsole.exe.config
+D:\Bt\CayQuyetDinhConsole\CayQuyetDinhConsole\bin\Debug\CayQuyetDinhConsole.exe
+D:\Bt\CayQuyetDinhConsole\CayQuyetDinhConsole\bin\Debug\CayQuyetDinhConsole.pdb
+D:\Bt\CayQuyetDinhConsole\CayQuyetDinhConsole\obj\Debug\CayQuyetDinhConsole.csprojAssemblyReference.cache
+D:\Bt\CayQuyetDinhConsole\CayQuyetDinhConsole\obj\Debug\CayQuyetDinhConsole.csproj.CoreCompileInputs.cache
+D:\Bt\CayQuyetDinhConsole\CayQuyetDinhConsole\obj\Debug\CayQuyetDinhConsole.exe
+D:\Bt\CayQuyetDinhConsole\CayQuyetDinhConsole\obj\Debug\CayQuyetDinhConsole.pdb

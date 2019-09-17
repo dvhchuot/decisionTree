@@ -1,0 +1,10 @@
+red,number,honda,ware,diaduc
+black,scooter,honda,ariBlade,conanhoa
+silver,number,yamaha,blade,diananhoa
+silver,scooter,honda,vision,diaduc
+black,scooter,honda,vision,diaduc
+black,number,honda,ware,diaduc
+red,number,yamaha,ware,diaduc
+red,scooter,honda,ariBlade,diaduc
+silver,number,honda,ware,conanhoa
+silver,number,honda,ware,diananhoa
