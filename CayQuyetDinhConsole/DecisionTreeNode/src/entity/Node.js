@@ -4,8 +4,6 @@ import { calculateCountOfArray, calculateEntropy, calculateCountClass } from "..
 export class Node {
 
     constructor() {
-        this.c1 = undefined
-        this.c2 = undefined
         this.entropy = undefined
         this.dataTraning = undefined
         this.dataCount = 0
@@ -17,7 +15,6 @@ export class Node {
         this.attributeName = undefined
         this.className = undefined
         this.classIndex = undefined
-        this.next = undefined
         this.listClassCount = []
         this.listClass = []
         this.listAttribute = []
@@ -42,7 +39,6 @@ export class Node {
         if (this.isLeaf) return
         let max = -1
         this.listAttribute.slice(0, this.listAttribute.length - 1).map(e => {
-            const newList = []
             const newA = this.dataTraning.reduce((t, i) => {
                 if (t[i[e]] === undefined) t[i[e]] = 1
                 else t[i[e]]++
@@ -70,5 +66,18 @@ export class Node {
         this.children.map(e => {
             e.run()
         })
+    }
+    print(s) {
+        let newS = (this.name && this.value) ? s + ` ${this.name} = ${this.value} ` : s
+        if(this.isLeaf) {
+            newS += `--> ${this.className}`
+            console.log(newS)
+        }
+        else {
+            newS += (this.name && this.value) ? '+' : ''
+            this.children.map(e => {
+                e.print(newS)
+            })
+        }
     }
 }
