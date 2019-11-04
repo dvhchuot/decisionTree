@@ -1,29 +1,59 @@
 import { Node } from "./src/entity/Node";
-import {calculateEntropy, calculateCountClass} from './src/common'
-import {data, category, output} from './src/data'
+import { calculateEntropy, calculateCountClass } from './src/common'
+import { data, category, output } from './src/data'
 import { ID3 } from "./src/entity/ID3";
+
+import _ from 'lodash'
+import lineReader from 'line-reader'
 
 import express from 'express'
 
+
 const app = express()
 
-const count = calculateCountClass(data, output, category)
-console.log("TCL: count", count)
+let indexLine = 0
+
+let nData = []
+
+let nCategory = []
+
+let nOutput = []
+
+
+lineReader.eachLine('train.txt', function (line, a) {
+  
+  if (indexLine === 0) {
+    nOutput = line.trim().split(',')
+  } else
+    if (indexLine === 1) {
+      nCategory = line.trim().split(',')
+    }
+    else {
+      const newData = line.trim().split(',')
+      nData.push(_.zipObject(nCategory, newData))
+    }
+  indexLine++
+  if (a) start()
+})
+
 
 const start = () => {
-    const id3 = new ID3(category, [],data, output, count)
-    id3.start()
+  console.log("TCL: nOutput", nOutput)
+  console.log("TCL: nCategory", nCategory)
+  console.log("TCL: nData", nData)
+  const count = calculateCountClass(nData, nOutput, nCategory)
+  const id3 = new ID3(nCategory, [],nData, nOutput, count)
+  id3.start()
 }
 
-start()
+// app.get('', (req, res) => {
 
-app.get('', (req, res) => {
-    
-    res.send(`Hello !`)
-  })
-  
-app.listen(3000, () => {console.log('hello')})
-  
+//   res.send(`Hello !`)
+// })
+
+// app.listen(3000, () => { console.log('hello') })
+
+// start()
 
 // const node = new Node()
 // node.c1 = 2

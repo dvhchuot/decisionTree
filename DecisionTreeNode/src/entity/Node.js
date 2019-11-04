@@ -53,11 +53,13 @@ export class Node {
                 node.init(undefined,attribute, data, this.listClass)
                 node.name = e
                 node.value = i
+                console.log(node.entropy, node.name, node.value)
                 return [...t, node]
             }, [])
             const gain = children.reduce((t , c) => {
                 return t - c.entropy * c.dataCount / this.dataCount
             }, this.entropy)
+            console.log("TCL: run -> gain", gain)
             if (gain > max) {
                 max = gain
                 this.children = children

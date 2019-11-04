@@ -1,0 +1,16 @@
+Co,Ko
+quan,TNTB,KNMM,COPHAI,chot
+Tuliem,Cao,Bietthu,Ko,Ko
+Tuliem,Cao,Bietthu,Co,Ko
+CauGiay,Cao,Bietthu,Ko,Co
+ThanhXuan,Cao,Phanlo,Ko,Co
+ThanhXuan,Thap,Phanlo,Ko,Co
+ThanhXuan,Thap,Phanlo,Co,Ko
+CauGiay,Thap,Phanlo,Co,Co
+Tuliem,Cao,Chungcu,Ko,Ko
+Tuliem,Thap,Phanlo,Ko,Co
+ThanhXuan,Thap,Chungcu,Ko,Co
+Tuliem,Thap,Chungcu,Co,Co
+CauGiay,Cao,Chungcu,Co,Co
+CauGiay,Thap,Bietthu,Ko,Co
+ThanhXuan,Cao,Chungcu,Co,Ko

@@ -12,6 +12,7 @@ export class ID3 {
     start() {
         this.root.init(this.listClassCount, this.attribute, this.listData, this.listClass)
         this.root.run()
+        // console.log(this.root)
         this.root.print('root ->>')
     }
 }
